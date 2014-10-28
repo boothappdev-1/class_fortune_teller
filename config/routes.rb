@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get("/lucky_numbers", { :controller => "fortunes", :action => "numbers" })
+  get("/",        { :controller => "fortunes", :action => "lucky_numbers" })
+
+  get("/lucky",   { :controller => "fortunes", :action => "lucky_numbers" })
+  get("/unlucky", { :controller => "fortunes", :action => "unlucky_numbers" })
+
 
   # Uncomment each route below ONE AT A TIME and debug.
   # get("/zodiacs/aries",       { :controller =>  zodiacs,  action =>  "ram" })
